@@ -9,10 +9,17 @@ import(
 ) 
 
 func main() {
+	strnumber:=GetInput()
+	intsli:=StrtoIntSlice(strnumber)
+	BubbleSort(intsli)
+	
+	fmt.Print(intsli)
+}
+
+func GetInput() string{
 	reader:= bufio.NewReader(os.Stdin)
 	var num string
 	var err error
-	numsli:=make([]int,0,10)
 
 	for {
 		fmt.Printf("Enter number (separate each number with a space): ")
@@ -22,8 +29,14 @@ func main() {
 		}
 		fmt.Println("Please enter correct input.")
 	}
+	return num
+}
+
+func StrtoIntSlice(num string) []int{
+
 	num= strings.Trim(num, " \r\n")
 	numarr:=strings.Split(num, " ") //split all of the numbers
+	intsli:=make([]int,0,10)
 
 	for i:=0; i< len(numarr); i++ {
 		number, err:= strconv.Atoi(numarr[i]) //turn each string into int
@@ -34,25 +47,29 @@ func main() {
 		break;
 		}
 		
-		numsli=append(numsli,number) //append the int number onto the slice
+		intsli=append(intsli,number) //append the int number onto the slice
 	}
+	return intsli
+}
 
+func BubbleSort(intsli []int){
 	var contSortflag bool //loop again the sorting loop if true
 	for{
 		contSortflag=false
-		for i:=0; i< (len(numarr)-1); i++ { //sorting loop
-			if numsli[i]>numsli[i+1]{
-			tempVar:=numsli[i]	//swap places if numsli[i]>numsli[i+1]
-			numsli[i]=numsli[i+1]
-			numsli[i+1]=tempVar
-			contSortflag=true
+		for i:=0; i< (len(intsli)-1); i++ { //sorting loop
+			if intsli[i]>intsli[i+1]{
+				Swap(intsli,i) //swap places if intsli[i]>intsli[i+1]
+				contSortflag=true
 			}
 		}
 		if contSortflag == false{
 			break;
 		}
 	}
+}
 
-	fmt.Print(numsli)
-
+func Swap(intsli []int,i int){
+	tempVar:=intsli[i]	
+	intsli[i]=intsli[i+1]
+	intsli[i+1]=tempVar
 }
