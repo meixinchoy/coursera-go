@@ -1,1 +1,20 @@
-Moore's Law suggested that the number of transistors that can be packed into a given unit of space will double about every two years. However, there are physical limitations that have prevented Moore’s law from continuing to be true. For instance, the power wall. As the size of the transistors decrease, the density of the transistors increase, which increases the power usage. A high ammount of power usage can be hard to achieve especially for laptops that uses batteries. Also, as the power needed increases, the temperature of the chip increases. Eventually, the amount of power needed will be so high that the temperature melts the chip. Although, air cooling is employed to lower the temperature, it cannot lower the temperature completely.  
+Moore's Law suggested that the number of transistors that can be packed into a given
+ unit of space will double about every two years. However, there are physical 
+ limitations that have prevented Moore’s law from continuing to be true. For 
+ instance, the power wall. As the size of the transistors decrease, the density of 
+ the transistors increase, which increases the power usage. A high amount of power 
+ usage can be hard to achieve especially for laptops that uses batteries. Also, as 
+ the power needed increases, the temperature of the chip increases. Eventually, the 
+ amount of power needed will be so high that the temperature melts the chip. 
+ Although, air cooling is employed to lower the temperature, it cannot lower the 
+ temperature completely. According to Dennard scaling, voltage should scale with 
+ transistor size, which reduces the dynamic power consumption. It keeps power the 
+ consumption and temperature low but it cannot prevent leakage of power. Moreover, 
+ the voltage level can’t go lower than the threshold voltage or else noise problem 
+ will occur.
+
+
+
+one line:
+Moore's Law suggested that the number of transistors that can be packed into a given unit of space will double about every two years. However, there are physical limitations that have prevented Moore’s law from continuing to be true. For instance, the power wall. As the size of the transistors decrease, the density of the transistors increase, which increases the power usage. A high amount of power usage can be hard to achieve especially for laptops that uses batteries. Also, as the power needed increases, the temperature of the chip increases. Eventually, the amount of power needed will be so high that the temperature melts the chip. Although, air cooling is employed to lower the temperature, it cannot lower the temperature completely. According to Dennard scaling, voltage should scale with transistor size, which reduces the dynamic power consumption. It keeps power the consumption and temperature low but it cannot prevent leakage of power. Moreover, the voltage level can’t go lower than the threshold voltage or else noise problem will occur.
+
