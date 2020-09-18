@@ -74,3 +74,43 @@ func main() {
 	}
 
 }
+
+/*
+peer review ans:
+
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	inputArray := make([]int, 12)
+
+	for i := range inputArray {
+		fmt.Println("Type a integer value")
+		fmt.Scan(&inputArray[i])
+	}
+
+	c := make(chan []int, 4)
+	go sortArray(inputArray[:3], c)
+	go sortArray(inputArray[3:6], c)
+	go sortArray(inputArray[6:9], c)
+	go sortArray(inputArray[9:], c)
+
+	//Merge arrays from go routines
+	joinArray := make([]int, 12)
+	joinArray = append(<-c, <-c...)
+	joinArray = append(joinArray, <-c...)
+	joinArray = append(joinArray, <-c...)
+
+	sort.Ints(joinArray)
+	fmt.Println(joinArray)
+}
+
+func sortArray(ints []int, c chan []int) {
+	sort.Ints(ints)
+	c <- ints
+}
+*/
