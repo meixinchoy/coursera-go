@@ -55,4 +55,35 @@ func main(){
   fmt.Println()
 
 }
+
+
+
+
+
+
+Thierry Chantier's code
+
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+var counter int
+
+func raceThing(who string) {
+	for i := 0; i < 10; i++ {
+		fmt.Printf("%s %d\n", who, counter)
+		counter++
+		time.Sleep(time.Millisecond * 100)
+	}
+}
+
+func main() {
+	go raceThing("One")
+	go raceThing("Two")
+	// add some sleep on the main thread to allow goroutines to be executed
+	time.Sleep(time.Second * 10)
+}
 */
