@@ -17,15 +17,17 @@ type Philo struct {
 
 var wg sync.WaitGroup
 var on sync.Once
+var fullcounter int = 0
 var philos []*Philo = make([]*Philo, 5)
 var csticks []*ChopS = make([]*ChopS, 5)
 
 func (p *Philo) eat() {
 	p.leftCS.Lock()
 	p.rightCS.Lock()
-	fmt.Println("Philosopher " + strconv.Itoa(p.num) + " is eating")
+	fmt.Println("starting to eat <" + strconv.Itoa(p.num) + ">")
 	p.leftCS.Unlock()
 	p.rightCS.Unlock()
+	fmt.Println("finishing eating <" + strconv.Itoa(p.num) + ">")
 	wg.Done()
 }
 
