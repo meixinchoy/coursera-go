@@ -24,7 +24,7 @@ func sort(arr []int, c1 chan int, wg *sync.WaitGroup) {
 	}
 }
 
-func main() {
+func mmain() {
 	const arrlength = 12 //change the length of array here (must be multiples of four)
 	var wg sync.WaitGroup
 	wg.Add(1)
